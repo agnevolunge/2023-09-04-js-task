@@ -1,5 +1,3 @@
-console.log('veikia')
-
 
 // SLAPTAŽODIS:
 // 1. Jeigu slaptažodis yra trumpesnis už 16 simbolių, tai parašyti jog „Slaptažodis yra per trumpas. Jis privalo būti bent 16 simbolių ilgumo."
@@ -56,21 +54,19 @@ console.log('veikia')
 
 // PAPILDYMAS PASSWORD SU GROTAZYMEM
 
-
 let originalPassword = 'kjhgfkjhfjh#gdkjhlkjh'
 let password = originalPassword.trim() //trim f-ja ignoruoja tarpus. ieskot google "trim string", kaip pvz siuo atveju galetu buti 3 raides slaptazodyje ir 14 tarpu.
 let passwordLength = password.length //sutrumpinam
 
 if (!password.includes('#')){
     console.log('Slaptažodis privalo turėti grotažymes')
-} else if (passwordLength < 16) {
+}   else if (passwordLength < 16) {
     console.log('Slaptažodis yra per trumpas. Jis privalo būti bent 16 simbolių ilgumo.')
-} else if (passwordLength < 21) {
+}   else if (passwordLength < 21) {
     console.log('Slaptažodis yra tinkamas. Tačiau rekomenduojama jog jis būtų bent 21 simbolio ilgumo.')
-} else {
-  console.log('Slaptažodis tinkamas')
-  }
-
+}   else {
+    console.log('Slaptažodis tinkamas')
+}
 
 
 // AMŽIUS:
@@ -122,7 +118,7 @@ if (!password.includes('#')){
 // } else {
 //   console.log('Įvestas amžius yra per didelis')
 // } 
-let age = 5
+let age = 100
 // let age = prompt ()
 
 console.log(age)
@@ -236,9 +232,22 @@ let correctAnswer31 = 1
 let correctAnswer32 = 1
 let correctAnswer33 = 1
 
-let playerAnswer31 = 0
-let playerAnswer32 = 0
-let playerAnswer33 = 0
+let playerAnswer31 = 1
+let playerAnswer32 = 1
+let playerAnswer33 = 1
+
+//tokiu atveju verta issirasyti visus variantus, kiek yra, tokiu atveju nieko nepraleisi. 
+
+//pvz: 
+//111 - visi teisingi
+//110 - 1,2tras teisingi, trecias ne
+//101 - 1mas teisingas, 2ras ne, 3cias teisingas
+//011 - ...
+//100 - ...
+//010 - ...
+//001 - ...
+//000 - ...
+
 
 // ILGASIS KODAS - PIRMINIS - TRECIAS LYGIS
 
@@ -297,57 +306,118 @@ console.log(output)
 // 3.3. 19-4 val. „Good Evening"
 // 4. Jeigu vartotojas yra ir prisijungęs, ir šiandien yra jo gimtadienis, tai prie pasisveikinimo dar turi būti parašytas ir pasveikinimas, pvz.: „Good Morning, Tom and have a great birthday!"
 
-let isLoggedIn = true
-let userName = 'John'
-let time = 16
-let isBirthday = true
-
-if (isLoggedIn == true && isBirthday == true) {
-    if (time >= 5 && time < 13){
-        console.log('Good Morning, ' + userName + ' and have a great birthday!')
-    } else if (time >= 13 && time < 19) {
-        console.log('Good Afternoon ' + userName + ' and have a great birthday!')
-    } else {
-        console.log('Good Evening ' + userName + ' and have a great birthday!')
-    }
-} else if (isLoggedIn == true && isBirthday == false) {
-    if (time >= 5 && time < 13){
-        console.log('Good Morning, ' + userName + '.')
-    } else if (time >= 13 && time < 19) {
-        console.log('Good Afternoon ' + userName + '.')
-    } else {
-        console.log('Good Evening ' + userName + '.')
-    }
-} else if (time >= 5 && time < 13) {
-    console.log('Good Morning')
-} else if (time >= 13 && time < 19) {
-    console.log('Good Afternoon') 
-} else {
-    console.log('Good Evening')
-}
-
-// KARTU SU ROMANU DAROMAS KODAS NEPABAIGTA
+//MANO DARYTAS KODAS - PASISVEIKINIMAS
 
 // let isLoggedIn = true
 // let userName = 'John'
 // let time = 16
 // let isBirthday = true
 
-// if (time >= 5 && time <= 12) {
-
-//     if (isLoggedIn) { //nereikia prie isLoggedIn rasyti true, nes true yra true
-//         console.log('Good Morning, ' + userName)
+// if (isLoggedIn == true && isBirthday == true) {
+//     if (time >= 5 && time < 13){
+//         console.log('Good Morning, ' + userName + ' and have a great birthday!')
+//     } else if (time >= 13 && time < 19) {
+//         console.log('Good Afternoon ' + userName + ' and have a great birthday!')
+//     } else {
+//         console.log('Good Evening ' + userName + ' and have a great birthday!')
 //     }
+// } else if (isLoggedIn == true && isBirthday == false) {
+//     if (time >= 5 && time < 13){
+//         console.log('Good Morning, ' + userName + '.')
+//     } else if (time >= 13 && time < 19) {
+//         console.log('Good Afternoon ' + userName + '.')
+//     } else {
+//         console.log('Good Evening ' + userName + '.')
+//     }
+// } else if (time >= 5 && time < 13) {
 //     console.log('Good Morning')
-// } else if (time >= 13 && time <= 18) {
-
-//     console.log('Good Afternoon')
-// } else if ((time >= 19 && time <=23)) || (time >= 0 && time <= 4) {
-
-//     console.log('Good Evening')
+// } else if (time >= 13 && time < 19) {
+//     console.log('Good Afternoon') 
 // } else {
-//     console.log('Hello')
+//     console.log('Good Evening')
 // }
 
+// KARTU SU ROMANU DAROMAS KODAS - PASISVEIKINIMAS
+
+let isLoggedIn = true
+let userName = 'John'
+let time = 16
+let isBirthday = true
+
+// if (time >= 5 && time < 13) {
+//     if (isLoggedIn) { ////nereikia prie isLoggedIn rasyti true, nes true yra true
+//     console.log('Good Morning, ' + userName)
+        
+//         if (isBirthday) {
+//           console.log ('Good Morning, ' + userName + 'and have a great birthday')
+//         }
+//         else {
+//           console.log ('Good Morning, ' + userName)
+//         } 
+//     } else {
+//     console.log('Good Morning')
+//     }
+
+// }   else if (time >= 13 && time < 19) {
+//     if (isLoggedIn) { 
+//     ('Good Afternoon, ' + userName)
+
+//       if (isBirthday) {
+//       console.log ('Good Afternoon, ' + userName + 'and have a great birthday')
+//       }
+//       else {
+//       console.log ('Good Afternoon, ' + userName)
+//       } 
+      
+//     } else {
+//     console.log('Good Afternoon')
+//     }
+   
+// }   else if ((time >= 19 && time < 24) || (time >= 0 && time < 5)) {
+//     if (isLoggedIn) { 
+//     ('Good Evening, ' + userName)
+
+//       if (isBirthday) {
+//       console.log ('Good Evening, ' + userName + 'and have a great birthday')
+//       }
+//       else {
+//       console.log ('Good Evening, ' + userName)
+//       } 
+
+//     } else {
+//     console.log('Good Evening')
+//     }
+
+// }   else {
+//     if (isLoggedIn) { 
+//     ('Hello, ' + userName)
+//     } else {
+//     console.log('Hello')
+//     }
+// }
+let greetingText = ''
+let nameText = ''
+let birthdayText = ' '
+
+if (time >= 5 && time < 13) {
+    greetingText = 'Good Morning'
+}   else if (time >= 13 && time < 19) {
+    greetingText = 'Good Afternoon'
+}   else if ((time >= 19 && time < 24) || (time >= 0 && time < 5)) {
+    greetingText = 'Good Evening'
+}   else {
+    greetingText = 'Hello'
+}
+
+if (isLoggedIn && userName !== '') {
+  nameText = `, ${userName}`
+}
+
+if (isLoggedIn && isBirthday)
+    birthdayText = ' and have a great Birthday'
 
 
+
+let greetingOutput = greetingText + nameText + birthdayText
+
+console.log(greetingOutput)
