@@ -56,7 +56,8 @@ console.log('veikia')
 
 // PAPILDYMAS PASSWORD SU GROTAZYMEM
 
-let originalPassword = 'kjhgfkjhfjhgdkjhlkjh'
+
+let originalPassword = 'kjhgfkjhfjh#gdkjhlkjh'
 let password = originalPassword.trim() //trim f-ja ignoruoja tarpus. ieskot google "trim string", kaip pvz siuo atveju galetu buti 3 raides slaptazodyje ir 14 tarpu.
 let passwordLength = password.length //sutrumpinam
 
@@ -69,6 +70,7 @@ if (!password.includes('#')){
 } else {
   console.log('Slaptažodis tinkamas')
   }
+
 
 
 // AMŽIUS:
